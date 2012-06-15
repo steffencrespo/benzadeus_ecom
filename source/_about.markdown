@@ -8,5 +8,6 @@ Apresentações do Benza Deus:
 * __Garrafinhas PET 400 ml__: com tampa de alumínio e selo de segurança.
 * __Garrafas vidro cônicas 750 ml__: com tampas de alumínio e selo de segurança.
 * __Garrafas vidro bordaleza 750 ml__: com tampas de alumínio e selo de segurança.
-* __Kit Presente__: estojo cartão kraft c/ garrafinha 400ml e taça c/gravação indelével 04 cores - Logotipo
-* __Kit Presente__: estojo cartão kraft c/garrafinha 400ml e dois "martelinhos" com gravações indeléveis - 04 cores - Logotipo.
+* __Kits Presente__: 
+  1. Estojo cartão kraft c/ garrafinha 400ml e taça c/gravação indelével 04 cores - Logotipo
+  2. Estojo cartão kraft c/garrafinha 400ml e dois "martelinhos" com gravações indeléveis - 04 cores - Logotipo.
