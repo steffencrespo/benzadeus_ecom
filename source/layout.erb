@@ -5,15 +5,14 @@
     <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
-    <%= stylesheet_link_tag "site.css" %>
+    <%= stylesheet_link_tag "bootstrap.min.css" %>
+    
     <%= yield_content :head %>
   </head>
   
   <body class="<%= page_classes %>">
 
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
+    <%= yield %>
     
   </body>
 </html>
