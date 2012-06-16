@@ -5,3 +5,6 @@
 #map {
   min-height: 450px;
 }
+#map img {
+  max-width: none;
+}
