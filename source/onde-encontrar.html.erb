@@ -1,14 +1,40 @@
 <% content_for :head do %>
   <%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=true' %>
   <%= javascript_include_tag 'gmaps.js' %>
+  <% require 'json' %>
   <script type="text/javascript">
+    var places = <%= JSON(data.places) %>;
+    
     $(document).ready(function(){
       map = new GMaps({
         div: '#map',
         lat: -30.02770410,
-        lng: -51.22873460
+        lng: -51.22873460,
+        zoom: 13
       });
     });
+    
+    for (var i = 0; i < places.length; i++) {
+      var c = function(place) {
+        GMaps.geocode({
+          address: place.info,
+          callback: function(results, status) {
+            if (status == 'OK') {
+              var latlng = results[0].geometry.location;
+              map.setCenter(latlng.lat(), latlng.lng());
+              map.addMarker({
+                lat: latlng.lat(),
+                lng: latlng.lng(),
+                infoWindow: {
+                  content: '<p>'+place.name+'</p>' + '<p>'+place.info.replace(/\n/g, '<br />')+'</p>'
+                }
+              });
+            }
+          }
+        });
+      };
+      c(places[i]);
+    }
   </script>
 <% end %>
 
