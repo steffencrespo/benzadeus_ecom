@@ -68,6 +68,8 @@
 # Change the images directory
 # set :images_dir, "alternative_image_directory"
 
+page "/index.html", :proxy => "a-bebida.html"
+
 activate :directory_indexes
 
 # Build-specific configuration

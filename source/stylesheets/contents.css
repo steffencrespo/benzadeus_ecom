@@ -1,3 +1,7 @@
 .contents {
-    opacity: 0.93;
+  opacity: 0.93;
+  filter: alpha(opacity=93);
+}
+#map {
+  min-height: 400px;
 }

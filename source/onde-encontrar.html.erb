@@ -1,0 +1,18 @@
+<% content_for :title do %>Onde Encontrar<% end %>
+
+<% content_for :head do %>
+  <%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=true' %>
+  <%= javascript_include_tag 'gmaps.js' %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      map = new GMaps({
+        div: '#map'
+      });
+    });
+  </script>
+<% end %>
+
+
+<div class="span12 hero-unit">
+  <div id="map" class="span10 hero-unit"></div>
+</div>
