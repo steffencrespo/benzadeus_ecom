@@ -2,8 +2,8 @@
 <%
   request.env["PATH_INFO"] =~ /([^\/]+)\.[\.\w]+$/
   current_page = $1
-  current_page = data.pages.all.first if current_page.nil?
-  title = data.pages.all.find { |p| p.to_s.to_slug.approximate_ascii.normalize.to_s == current_page }
+  current_page = data.pages.first if current_page.nil?
+  title = data.pages.find { |p| p.to_s.to_slug.approximate_ascii.normalize.to_s == current_page }
 %>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@
           <a class="brand" href="/">Benza Deus!</a>
           <ul class="nav">
             <%
-              data.pages.all.each do |page| 
+              data.pages.each do |page| 
               page_slug = page.to_s.to_slug.approximate_ascii.normalize.to_s
               active = page == title
             %>
