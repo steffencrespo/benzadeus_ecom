@@ -1,8 +1,7 @@
 <% require 'babosa' %>
 <%
   request.env["PATH_INFO"] =~ /([^\/]+)\.[\.\w]+$/
-  current_page = $1
-  current_page = data.pages.first if current_page.nil?
+  current_page = $1 || data.pages.first
   title = data.pages.find { |p| p.to_s.to_slug.approximate_ascii.normalize.to_s == current_page }
 %>
 
@@ -32,9 +31,8 @@
             <%
               data.pages.each do |page| 
               page_slug = page.to_s.to_slug.approximate_ascii.normalize.to_s
-              active = page == title
             %>
-              <li class="<%= page_slug %><%= " active" if active %>"><%= link_to page, page_slug %></li>
+              <li class="<%= page_slug %><%= " active" if page == title %>"><%= link_to page, page_slug %></li>
             <% end %>
           </ul>
         </div>
